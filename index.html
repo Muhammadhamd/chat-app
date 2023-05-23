@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Acme&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@700&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Ubuntu+Condensed&family=Ubuntu:wght@500&family=Work+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #1f2233;
+      color: white;
+    }
+    .main-container {
+    }
+    header {
+      font-family: "Poppins";
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10% 10px 3%;
+      position: sticky;
+      top: 0;
+      background: #08080894;
+    }
+    header .logo {
+      display: flex;
+      justify-content: center;
+    }
+    header .logo h1 span {
+      color:#86c163;
+    }
+    header ul {
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+    }
+    header ul li {
+      list-style: none;
+    }
+    header ul li a {
+      text-decoration: none;
+      color: #ccc;
+    }
+    .landing-page {
+      display: flex;
+      font-family: "Poppins";
+      background-color: #1f242d;
+      color: white;
+      width: 100%;
+      background: radial-gradient(black, #1f242d);
+      padding: 50px 0 0 0;
+      position: sticky;
+      top: 67px;
+      z-index: -100;
+      flex-wrap: wrap-reverse;
+    }
+    .landing-page .left-side-container {
+      width: 41%;
+      display: flex;
+      justify-content: center;
+    }
+    .landing-page .left-side-container img {
+      opacity: 0.8;
+    }
+    .landing-page .right-side-container {
+      display: flex;
+      align-items: center;
+    }
+    .landing-page .right-side-container .content-box {
+    }
+    .landing-page .right-side-container .content-box h1 {
+      font-size: 60px;
+    }
+    .landing-page .right-side-container .content-box p {
+      color: #ccc;
+      font-size: 19px;
+    }
+    .landing-page .right-side-container .content-box button {
+      color: white;
+      padding: 9px 18px;
+      background: #86c163;
+      border: none;
+      border-radius: 4px;
+      margin: 39px 0;
+      cursor: pointer;
+    }
+
+    /* line design css */
+
+    .line-design {
+      width: 100%;
+      height: 10px;
+      background-color: #ccc;
+    }
+
+    /* about section */
+
+    .about-sec {
+      background-color: #1f242d;
+      color: white;
+      font-family: "Poppins";
+      padding: 50px 0 30px 40px;
+    }
+
+    .about-sec .content-box {
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .about-sec .content-box .content {
+      width: 50%;
+      margin: 5px 20px 0 10px;
+    }
+    .about-sec .content-box .content h3 , .content-box2 h3 {
+      font-size: 23px;
+    }
+    .about-sec .content-box .content h3 span , .content-box2 h3 span {
+      color: #86c163;
+    }
+    .about-sec .content-box .content h1 {
+      display: flex;
+      flex-direction: column;
+      font-size: 38px;
+      line-height: 40px;
+      margin: 35px 0px 0px 0;
+      font-weight: 900;
+    }
+    .about-sec .content-box .content h1 span {
+      color: #86c163;
+      font-size: 23px;
+    }
+    .about-sec .content-box .content p , .content-box2 p {
+      margin: 20px 0px 40px 0;
+      line-height: 2;
+      color: #ced4dd;
+      font-size: 18px;
+      font-family: "Source Sans Pro";
+      font-weight: 500;
+    }
+    .about-sec .content-box .left-side {
+      width: 40%;
+      min-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-sec .content-box .left-side .image-frame {
+      width: 500px;
+      box-shadow: 0px 0px 5px white;
+      display: flex;
+      justify-content: center;
+      max-height: 600px;
+      height: 100%;
+    }
+    .about-sec .content-box .left-side .image-frame .img-div {
+      width: 90%;
+    }
+    .about-sec .content-box .left-side .image-frame .img-div img {
+      width: 100%;
+    }
+
+    .about-sec .left-side .skills-sec{
+        width: 74%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 25px;
+    }
+    .about-sec .left-side .skills-sec h3{
+        margin: 10px;
+    }
+    .about-sec .left-side .skills-sec div{
+        width: 75%;
+    background-color: white;
+    height: 3px;
+    }
+    .about-sec .left-side .skills-sec div div{
+        background-color: #86c163;
+    }
+    .about-sec .left-side .skills-sec div:nth-child(2) div{
+        width: 70%;
+    }
+    .about-sec .left-side .skills-sec div:nth-child(4) div{
+        width: 50%;
+
+    }
+    .about-sec .left-side .skills-sec div:nth-child(6) div{
+        width: 90%;
+        
+    }
+    @media screen and (max-width:745px){
+      .landing-page{
+        top: -150px;
+      }
+    }
+
+    @media screen and (max-width:700px) {
+        .landing-page .left-side-container {
+    width: unset;
+}
+.landing-page .right-side-container .content-box h1 {
+    line-height: 70px;
+}
+    }
+
+
+    /* to control height of screen */
+    @media screen and (max-height:429px) {
+      .landing-page{
+        top: 55px;
+        padding: 0;
+      }
+    }
+    @media screen and (max-height:360px) {
+      .landing-page{
+        top: -16px;
+        padding: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="logo">
+          <img src="" alt="" />
+          <h1>Portfo<span>lio.</span></h1>
+        </div>
+        <ul>
+          <li><a href="">contact</a></li>
+          <li><a href="">about me</a></li>
+          <li><a href="">hire me</a></li>
+        </ul>
+      </header>
+      <div class="landing-page">
+        <div class="left-side-container">
+          <img src="img/image2-removebg-preview.png" alt="" />
+        </div>
+        <div class="right-side-container">
+          <div class="content-box">
+            <p>Hi there! I</p>
+            <h1>Daniyal Faraz</h1>
+            <p>A creative freelancer and python programmer</p>
+            <button>Hire me</button>
+          </div>
+        </div>
+      </div>
+      <div class="line-design"></div>
+      <div class="about-sec">
+        <div class="content-box">
+          <div class="content">
+            <h3>About <span>Me</span></h3>
+            <h1><span>I am</span> Daniyal Faraz</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+              asperio, delectus tempora illum. Saepe
+              impedit repudiandae assumenda voluptatum ipsa dolore nisi ad,
+              nulla repellat hic consectetur aspernatur ea minus reprehenderit
+              id totam molestiae odit quisquam maxime! Voluptas inventore vel
+              explicabo distinctio aperiam, hic, cumque cupiditate rerum
+              temporibus est, fuga placeat sint unde neque quaerat ducimus autem
+              nemo architecto ipsam. Illo quibusdam possimus libero vitae
+              doloremque nulla aspernatur ducimus ea tempora, quo,
+              exercitationem nobis tempore facere dolorem reiciendis, assumenda
+              voluptates!
+            </p>
+            <h3>My <span>coding</span> journey</h3>
+            <p>Lorsicing eliquisqemptes reiciendis iusto dolorum omnis nisi similique vero asperiores numquam fugiat id vitae, facere, odit repellat libero amet nostrum quia quaerat laborum deserunt sed a! At officiis, tempora accusamus ad et, voluptatibus perferendis repellat esse voluptatum aspernatur nostrum, magni velit cupiditate ducimus. Autem vero voluptatum debitis ipsam inventore veritatis impedit eius necessitatibus explicabo hic. Eos?</p>
+          </div>
+          <div class="left-side">
+            <div class="image-frame">
+              <div class="img-div">
+                <img src="img/picture1.jpeg" alt="" />
+              </div>
+            </div>
+            <div class="skills-sec">
+                <h3>PYTHON</h3>
+                <div><div></div></div>
+                <h3>C#</h3>
+                <div><div></div></div>
+                <h3>C++</h3>
+                <div><div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="content-box2">
+            <h3><span>Connect</span> to me</h3>
+            <p>Lorem Haum edam comqueur sapiente asperiores aspernatur excepturi. Quia totam eveniet ratione facilis nesciunt nisi nam nobis, repudiandae reiciendis enim ea, fugit, officia perspiciatis sunt excepturi qui. Ut, quidem laborum exercitationem incidunt pariatur dolores consequuntur atque laboriosam magni! Facilis asperiores rem, ullam consequuntur vel, sequi officia quia tempora harum quo fugiat sint qui eius cumque quibusdam cupiditate esse reiciendis odio soluta, corporis vitae voluptate odit?</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
