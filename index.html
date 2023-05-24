@@ -55,6 +55,7 @@
     }
     .main-container header .hamburger-div{
         display: none;
+        font-size: 25px;
       }
     .landing-page {
       display: flex;
@@ -120,13 +121,13 @@
     .about-sec .content-box {
         display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 056px 0;
     }
     .about-sec .content-box .content {
-      width: 50%;
+      width: 30%;
       margin: 5px 20px 0 10px;
-      min-width: 660px;
+      min-width: 560px;
     }
     .about-sec .content-box .content h3 , .content-box2 h3 {
       font-size: 23px;
@@ -179,10 +180,10 @@
     }
 
     .about-sec .left-side .skills-sec{
-        width: 74%;
     display: flex;
     flex-direction: column;
     margin: 30px 0 0 25px;
+    width: 296px;
     }
     .about-sec .left-side .skills-sec h3{
         margin: 10px;
@@ -222,23 +223,55 @@
     min-width: unset;
 }
     }
-
+    @media screen and (max-width:1150px) {
+      .about-sec .content-box{
+        justify-content: center;
+        
+      }
+      .about-sec .content-box .content{
+        width: 100%;
+      }
+    }
     @media screen and (max-width:700px) {
         .landing-page .left-side-container {
     width: unset;
+
+}
+
+.landing-page .right-side-container{
+  padding: 0 20px;
+}
+.about-sec .content-box{
+  margin: 0;
 }
 .landing-page .right-side-container .content-box h1 {
     line-height: 70px;
+    font-size: 45px;
+}
+.landing-page .right-side-container .content-box p{
+  font-size: 17px;
 }
     }
 
-    @media screen and (max-width:500px){
+    @media screen and (max-width:510px){
       /* to visible menu bar */
       .main-container header .hamburger-div{
         display: block;
       }
     header ul {
       display: none;
+    }
+
+    /* to control about sec layout */
+    .about-sec{
+      padding: 50px 0 30px 16px;
+    }
+    .about-sec .content-box .left-side{
+      width: 100%;
+      min-width: unset;
+    }
+    .about-sec .content-box .left-side .image-frame{
+      width: 100%;
     }
     }
     /* to control height of screen */
@@ -247,6 +280,9 @@
         top: 55px;
         padding: 0;
       }
+      .about-sec .left-side{
+
+      }
     }
     @media screen and (max-height:360px) {
       .landing-page{
@@ -254,9 +290,132 @@
         padding: 0;
       }
     }
+
+    /* hamburger layout css */
+
+    .hamburger-layout{
+      position: fixed;
+    background:#1f242d;
+    width: 90%;
+    z-index: 100;
+    display: none;
+    height: 100vh;
+    overflow: auto;
+    animation: slideright 0.5s ease forwards;
+
+    }
+    .hamburger-layout .logoside {
+      width: 100%;
+    background:#86c163;
+    }
+    .hamburger-layout .logoside div:nth-child(1){
+      text-align: right;
+    }
+    .hamburger-layout .logoside div i{
+    transform: rotate(45deg);
+    font-size: 26px;
+    color: black;
+    margin: 10px;
+    }
+    .hamburger-layout .logoside .logo-div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .hamburger-layout .logoside .logo-div .logo-holder{
+      width: 120px;
+      position: relative;
+    top: 49px;
+    height: 128px;
+    }
+    .hamburger-layout .logoside .logo-div .logo-holder img{
+      width: 100%;
+      border-radius: 50%;
+      border: 9px solid #86c163;
+    }
+    .hamburger-layout .link-side{
+      font-size: 25px;
+    font-family: "Poppins";
+    padding: 62px 22px;
+    font-weight: 400;
+    }
+    .hamburger-layout .link-side div h1{
+      font-size: 30px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 2px solid #71c369;
+    max-width: 295px;
+    margin: 34px 0 5px 0;
+    
+    }
+    .hamburger-layout .link-side ul{}
+    .hamburger-layout .link-side ul li , .hamburger-layout .link-side div li{
+      list-style: none;
+      margin: 0 10px;
+    }
+    .hamburger-layout .link-side ul li a , .hamburger-layout .link-side div li a{
+      text-decoration: none;
+      color: #ccc;
+    }
+    .hamburger-layout .link-side ul li a i{}
+    .hamburger-layout .link-side div{}
+    
+    
+    .hamburger-layout .link-side div li a i{}
+
+
+    
+  /* animation to close and open hamburger */
+  .open-hamburger{
+  }
+  .close-hamburger{
+    animation: slideleft 0.5s ease forwards;
+  }
+
+  /* hamburger animation */
+  @keyframes slideright {
+      0% {
+        transform: translateX(-100px);
+      }
+      100% {
+        transform: translateX(0px);
+    }
+  }
+  @keyframes slideleft {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(-100px);
+    }
+  }
   </style>
   <body>
     <div class="main-container">
+      <div class="hamburger-layout">
+        <div class="logoside">
+          <div><i class="bx bx-cross"></i></div>
+          <div class="logo-div">
+          <div class="logo-holder">
+            <img src="img/hamburger-logo.jpeg" alt="">
+          </div>
+          </div>
+        </div>
+        <div class="link-side">
+          <ul>
+            <li><a href="">Content</a></li>
+            <li><a href="">Content</a></li>
+            <li><a href="">about me</a></li>
+          </ul>
+          <div>
+            <h1>Social Platforms</h1>
+            <li><a href=""><i></i>Github</a></li>
+            <li><a href=""><i></i>Github</a></li>
+            <li><a href=""><i></i>Github</a></li>
+            <li><a href=""><i></i>Github</a></li>
+          </div>
+        </div>
+      </div>
       <header>
         <div class="logo">
           <img src="" alt="" />
@@ -329,5 +488,33 @@
         </div>
       </div>
     </div>
+    <script>
+
+    
+      let Limg= document.querySelector(".landing-page .left-side-container img"),
+          screenWidth = screen.width;
+      if (screenWidth <= 450) {
+        Limg.src = "img/mblimg.png"
+      }
+
+      // hamburger
+
+      let hamBurgerBtn = document.querySelector(".hamburger-div"),
+          hamburgerMenu = document.querySelector(".hamburger-layout"),
+          hamburgerMenuBtn =document.querySelector(".hamburger-layout div i")
+
+      hamBurgerBtn.addEventListener('click',
+      function(){
+        hamburgerMenu.style = "display:block"
+        // hamburgerMenu.className += " open-hamburger"
+        // hamburgerMenu.classList.remove = "close-hamburger"
+      })
+      hamburgerMenuBtn.addEventListener('click',
+      function(){
+        hamburgerMenu.style = "display:none"
+        // hamburgerMenu.classList.remove = "open-hamburger"
+        // hamburgerMenu.className += " close-hamburger"
+      })
+    </script>
   </body>
 </html>
